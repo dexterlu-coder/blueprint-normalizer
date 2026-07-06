@@ -1,0 +1,56 @@
+# Local private source materials
+/local_data/
+
+# Local secrets
+.env/
+blueprint-normalizer.toml
+
+# Sensitive drawing inputs
+/docs/**/*.pdf
+/docs/**/*.PDF
+/docs/**/*.png
+/docs/**/*.jpg
+/docs/**/*.jpeg
+/docs/**/*.tif
+/docs/**/*.tiff
+
+# Generated drawing artifacts
+/output/
+/outputs/
+/tmp/
+/runs/
+/build/
+/dist/
+/tools/pdf_rotation_mvp/input/*
+/tools/pdf_rotation_mvp/output/*
+/tools/pdf_rotation_mvp/work/*
+!/tools/pdf_rotation_mvp/input/.gitkeep
+!/tools/pdf_rotation_mvp/output/.gitkeep
+!/tools/pdf_rotation_mvp/work/.gitkeep
+
+# Local ML weights and exports
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Local drafts not intended for the public repository
+/reports/homework-submission-draft.md
+/reports/candidates/
+
+# Python/runtime cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Packaging artifacts
+*.spec.bak
+
+# Editor and OS noise
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

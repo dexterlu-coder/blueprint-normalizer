@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blueprint-normalizer"
+version = "0.1.0"
+description = "Normalize mechanical drawing PDFs by rotation, title-block OCR, and drawing-number based output naming."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "opencv-python-headless",
+]
+
+[project.scripts]
+blueprint-normalizer = "blueprint_normalizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+blueprint_normalizer = []
+"blueprint_normalizer.pdf_rotation_mvp" = ["prompts/*.md"]
